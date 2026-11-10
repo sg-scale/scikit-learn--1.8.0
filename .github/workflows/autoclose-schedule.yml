@@ -19,15 +19,15 @@ jobs:
     name: autoclose labeled PRs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.13'
       - name: Install PyGithub
         run: pip install -Uq PyGithub
 
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Close PRs labeled more than 14 days ago
         run: |
